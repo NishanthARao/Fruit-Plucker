@@ -1,0 +1,7 @@
+# The-fruit-plucker.....
+Hey guys! These are few codes i had written for my project which is based on image processing and receiving data from python to arduino.
+The file "x.py" is a python code (OPEN CV2) written beautifully by  Adrian Rosebrock. I have made a few changes to the code in order that it sets in right to my bot.
+This code draws a circle around the object, say a ball of desired color (that is determined by the user in the HSV format) and returns the x,y coordinates of the centre of the circle along with the radius of the circle drawn. These values are thrown to the Serial port via the Serial Write command.From this Serial port, the arduino collects the coordinates and according to comparisons made with the standard origin( a set of coordinate values based on which the robot decides to move forward, left or right) and corresponding voltages are given to the motors so that the bot goes right next to the ball.
+The file "Final-JED-i.ino" is the arduino file and contains all the codes nessecary to process the data sent by python based on image processing using Open CV. It also contains a function "Servo" that activates the servo motor which inturn moves the hand of the robot, eventually hitting it and the ball is then collected in a basket.
+The file "default_cam.sh" is a script that switches the default camera (The built-in webcam of laptop or a USB Cam). Please note that this script is written on a linux platform.
+The 
